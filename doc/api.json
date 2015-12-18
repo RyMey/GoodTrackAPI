@@ -1,0 +1,364 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "GoodTrack API Documentation",
+    "version": "1.0.0",
+    "title": "GoodTrack API",
+    "contact": {
+      "email": "rya.eyvriska@mail.ugm.ac.id"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "localhost",
+  "basePath": "/goodtrack",
+  "tags": [
+    {
+      "name": "Track",
+      "description": "Access to track data"
+    },
+    {
+      "name": "Artist",
+      "description": "Access to artist data"
+    },
+    {
+      "name": "Album",
+      "description": "Access to album data"
+    },
+    {
+      "name": "Genre",
+      "description": "Access to genre data"
+    },
+    {
+      "name": "Playlist",
+      "description": "Access to playlist data"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/tracks/{page}": {
+      "get": {
+        "tags": [
+          "Track"
+        ],
+        "summary": "Give data Track in GoodTrack",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "path",
+            "description": "The page to see Tracks data, give 12 data per page",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "All error message"
+          }
+        }
+      }
+    },
+    "/tracks-by-song/{id}": {
+      "get": {
+        "tags": [
+          "Track"
+        ],
+        "summary": "Get data Track by song id",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "To see Tracks data by song id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "All error message"
+          }
+        }
+      }
+    },
+    "/tracks-by-artist/{id}": {
+      "get": {
+        "tags": [
+          "Track"
+        ],
+        "summary": "Give Track data by artist id",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "To see Tracks data by artist id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "All error message"
+          }
+        }
+      }
+    },
+    "/tracks-by-album/{id}": {
+      "get": {
+        "tags": [
+          "Track"
+        ],
+        "summary": "Get list Track by Album id",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "To see Track by album id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "All error message"
+          }
+        }
+      }
+    },
+    "/tracks-by-genre/{id}": {
+      "get": {
+        "tags": [
+          "Track"
+        ],
+        "summary": "Get list track by genre id",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "To see Tracks data by genre id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "All error message"
+          }
+        }
+      }
+    },
+    "/tracks-by-playlist/{id}": {
+      "get": {
+        "tags": [
+          "Track"
+        ],
+        "summary": "Get track by playlist id",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The id of playlist",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "All error message"
+          }
+        }
+      }
+    },
+    "/artist/{page}": {
+      "get": {
+        "tags": [
+          "Artist"
+        ],
+        "summary": "Get Name of artist, get 12 name in 1 page",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "path",
+            "description": "The page of artist name",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "All error message"
+          }
+        }
+      }
+    },
+    "/album/{page}": {
+      "get": {
+        "tags": [
+          "Album"
+        ],
+        "summary": "Get album title, 12 title in 1 page",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "path",
+            "description": "The page of album name",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "All error message"
+          }
+        }
+      }
+    },
+    "/genre/{page}": {
+      "get": {
+        "tags": [
+          "Genre"
+        ],
+        "summary": "Give 12 genre name in 1 page",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "path",
+            "description": "Give page who will see",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "All error message"
+          }
+        }
+      }
+    },
+    "/playlist/{page}": {
+      "get": {
+        "tags": [
+          "Playlist"
+        ],
+        "summary": "Get 12 playlist name in 1 page",
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "path",
+            "description": "The page of playlist name",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "All error message"
+          }
+        }
+      }
+    }
+  }
+}
